@@ -1,0 +1,6 @@
+query ObterPopularidadeMaxima
+{
+    media: Media(sort: POPULARITY_DESC) {
+        popularity
+    }
+}

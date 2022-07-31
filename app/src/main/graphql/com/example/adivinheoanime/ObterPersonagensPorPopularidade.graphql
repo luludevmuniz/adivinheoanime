@@ -1,0 +1,27 @@
+query ObterPersonagensPorPopularidade($numeroDePersonagens: Int!, $popularidade: Int!)
+{
+    page: Page(perPage: $numeroDePersonagens)
+    {
+        media(popularity_greater: $popularidade) {
+            title {
+                romaji
+            }
+            coverImage {
+                extraLarge
+                color
+            }
+            characters(sort: FAVOURITES_DESC, perPage: 1) {
+                nodes
+                {
+                    name {
+                        full
+                    }
+                    image
+                    {
+                        large
+                    }
+                }
+            }
+        }
+    }
+}

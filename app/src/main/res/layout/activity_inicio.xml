@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principal"
+    tools:context=".InicioActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_modo_jogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@id/constraint_dificuldade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_adivinhe_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textoPadrao"
+            android:text="Adivinhe o"
+            android:textColor="@color/cinza_texto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/button_anime"
+            style="@style/textoPadrao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/botao_direito_retangular_invertido_com_borda_secundaria"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:text="@string/anime"
+            android:textAlignment="center"
+            android:textColor="@color/cinza_texto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_view_adivinhe_o"
+            app:layout_constraintTop_toBottomOf="@id/text_view_adivinhe_o" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/button_personagem"
+            style="@style/textoPadrao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/botao_esquerdo_retangular_invertido_com_borda_secundaria"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:text="@string/personagem"
+            android:textAlignment="center"
+            android:textColor="@color/cinza_texto"
+            app:layout_constraintStart_toEndOf="@id/text_view_adivinhe_o"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_adivinhe_o" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_dificuldade"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_jogar"
+        app:layout_constraintTop_toBottomOf="@id/constraint_modo_jogo">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_selecione_dificuldade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/textoPadrao"
+            android:text="Selecione a dificildade:"
+            android:textColor="@color/cinza_texto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_facil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/botao_invertido_com_borda_branca"
+            android:text="Fácil"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toStartOf="@id/button_medio"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_selecione_dificuldade" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_medio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/botao_invertido_com_borda_branca"
+            android:text="Médio"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/button_facil"
+            app:layout_constraintTop_toBottomOf="@id/text_view_selecione_dificuldade" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_dificil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/botao_invertido_com_borda_branca"
+            android:text="Difícil"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/button_facil"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/button_facil"
+            app:layout_constraintTop_toBottomOf="@id/button_medio" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_muito_dificil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/botao_invertido_com_borda_branca"
+            android:text="Muito Difícil"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@id/button_medio"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/button_medio"
+            app:layout_constraintTop_toBottomOf="@id/button_medio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_jogar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botao_padrao"
+        android:backgroundTint="@color/principal"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Jogar"
+        android:enabled="false"
+        android:textColor="@color/cinza_texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_recordes"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_recordes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/botao_padrao"
+        android:backgroundTint="@color/secundaria"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Recordes"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

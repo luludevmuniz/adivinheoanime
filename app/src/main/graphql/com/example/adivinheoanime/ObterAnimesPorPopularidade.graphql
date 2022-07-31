@@ -1,0 +1,15 @@
+query ObterAnimesPorPopularidade($numeroDeAnimes: Int!, $popularidade: Int!)
+{
+    page: Page(perPage: $numeroDeAnimes)
+    {
+        media(popularity_greater: $popularidade, type: ANIME, format: TV) {
+            title {
+                romaji
+            }
+            coverImage {
+                extraLarge
+                color
+            }
+        }
+    }
+}

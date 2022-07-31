@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:background="@color/secundaria">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_pontuacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Pontuação: "
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/text_view_pontuacao_valor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_pontuacao_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_pontuacao"
+        app:layout_constraintTop_toTopOf="@id/text_view_pontuacao"
+        tools:text="10/10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_tempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tempo: "
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/text_view_pontuacao"
+        app:layout_constraintTop_toBottomOf="@id/text_view_pontuacao"
+        app:layout_constraintBottom_toTopOf="@id/text_view_data"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_tempo_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/text_view_pontuacao_valor"
+        app:layout_constraintTop_toTopOf="@id/text_view_tempo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="50 segundos" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Data: "
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_view_tempo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_data_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/text_view_tempo_valor"
+        app:layout_constraintTop_toTopOf="@id/text_view_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="14/05/2001" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/cinza_texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
